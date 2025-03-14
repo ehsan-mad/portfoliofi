@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ehsan Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.77/build/spline-viewer.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" sizes="320x320" href="/logo.png">
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+      }
+    </script>
+  </head>
+  <body class="bg-white">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-6 bg-[#303030] shadow-md ">
+      <div class="text-2xl text-green-700 font-bold">Portfolio</div>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 text-green-700">
+        <li><a href="port.html" class="hover:text-red-500 nav-link">Home</a></li>
+        <li><a href="about.html" class="hover:text-red-500 nav-link">About</a></li>
+        <li><a href="services.html" class="hover:text-red-500 nav-link">Services</a></li>
+        <li><a href="pricing.html" class="hover:text-red-500 nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="hover:text-red-500 nav-link">Contact</a></li>
+        <li><a href="pages.html" class="hover:text-red-500 nav-link">Pages</a></li>
+      </ul>
+
+      <!-- Download Button -->
+      <a
+        href="#"
+        class="hidden md:block bg-blue-600 text-white px-4 py-2 rounded-md"
+        >Download CV</a
+      >
+
+      <!-- Hamburger Icon -->
+      <button class="md:hidden" onclick="toggleMenu()">
+        <svg
+          class="w-8 h-8 text-gray-800"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by Default) -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#303030] shadow-md p-4">
+      <ul class="space-y-4 text-gray-700 text-center">
+        <li><a href="port.html" class="block hover:text-blue-500">Home</a></li>
+        <li>
+          <a href="about.html" class="block hover:text-blue-500">About</a>
+        </li>
+        <li>
+          <a href="services.html" class="block hover:text-blue-500">Services</a>
+        </li>
+        <li>
+          <a href="pricing.html" class="block hover:text-blue-500">Pricing</a>
+        </li>
+        <li>
+          <a href="contact.html" class="block hover:text-blue-500">Contact</a>
+        </li>
+        <li>
+          <a href="pages.html" class="block hover:text-blue-500">Pages</a>
+        </li>
+      </ul>
+    </div>
+    <script>
+        // Get the current page URL
+        const currentPage = window.location.pathname.split("/").pop(); 
+      
+        // Get all navigation links
+        const navLinks = document.querySelectorAll(".nav-link");
+      
+        navLinks.forEach(link => {
+          // Check if the href of the link matches the current page
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("text-red-600"); // Add active styles
+          }
+        });
+      </script>
+    <div class="w-full mb-8 md:mb-0">
+        <div class="relative w-full md:w-[1900px] h-[300px] md:h-[1200px] rounded-lg">
+          <script
+            type="module"
+            src="https://unpkg.com/@splinetool/viewer@1.9.77/build/spline-viewer.js"
+          ></script>
+          <spline-viewer
+            url="https://prod.spline.design/DPJRzFTtlfOLWkm7/scene.splinecode"
+            class="absolute inset-0 pointer-events-none"
+          ></spline-viewer>
+        </div>
+      </div>
+      
+    <section
+      class="py-16 bg-gradient-to-r from-[#10121B] via-[#10121B] to-[#3D3D3D] rounded-lg"
+    >
+      <div class="container mx-auto px-6 lg:px-12 text-center">
+        <h3 class="text-blue-500 font-medium mb-2">Latest Articles</h3>
+        <h2 class="text-4xl font-bold text-[#00e300] mb-6">My Blog</h2>
+        <p class="text-[#fe0033] max-w-2xl mx-auto mb-12">
+          Exploring the world of gaming and nature. Read my latest thoughts on
+          FPS & AAA games, as well as hiking adventures.
+        </p>
+
+        <!-- Blog Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Blog Post 1 (FPS Games) -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="https://source.unsplash.com/400x250/?gaming,shooter"
+              alt="FPS Gaming"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">
+                Top 5 FPS Games of 2024
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Discover the best first-person shooter games you should be
+                playing right now.
+              </p>
+              <a
+                href="#"
+                class="text-blue-500 font-medium mt-4 inline-block hover:underline"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <!-- Blog Post 2 (AAA Games) -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="https://source.unsplash.com/400x250/?gaming,controller"
+              alt="AAA Gaming"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">
+                Is AAA Gaming Dying?
+              </h3>
+              <p class="text-gray-600 mt-2">
+                A deep dive into the current state of AAA gaming and its future.
+              </p>
+              <a
+                href="#"
+                class="text-blue-500 font-medium mt-4 inline-block hover:underline"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <!-- Blog Post 3 (Hiking) -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src="https://source.unsplash.com/400x250/?hiking,mountains"
+              alt="Hiking Adventure"
+              class="w-full"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-900">
+                Best Hiking Trails in 2024
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Explore breathtaking hiking trails perfect for your next
+                adventure.
+              </p>
+              <a
+                href="#"
+                class="text-blue-500 font-medium mt-4 inline-block hover:underline"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- View More Button -->
+        <div class="mt-12">
+          <a
+            href="#"
+            class="bg-[#008a00] text-white px-6 py-3 rounded-md shadow-md hover:bg-[#b10023] transition"
+          >
+            View All Blogs
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

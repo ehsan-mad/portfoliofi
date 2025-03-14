@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ehsan Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.77/build/spline-viewer.js"
+    ></script>
+    <link rel="icon" type="image/png" sizes="320x320" href="/logo.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+      }
+    </script>
+  </head>
+  <body class="bg-white">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full flex justify-between items-center p-6 bg-white shadow-md ">
+      <div class="text-2xl font-bold">Portfolio</div>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 text-gray-700">
+        <li><a href="port.html" class="hover:text-blue-500 nav-link">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-500 nav-link">About</a></li>
+        <li><a href="services.html" class="hover:text-blue-500 nav-link">Services</a></li>
+        <li><a href="pricing.html" class="hover:text-blue-500 nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="hover:text-blue-500 nav-link">Contact</a></li>
+        <li><a href="pages.html" class="hover:text-blue-500 nav-link">Pages</a></li>
+      </ul>
+
+      <!-- Download Button -->
+      <a
+        href="#"
+        class="hidden md:block bg-blue-600 text-white px-4 py-2 rounded-md"
+        >Download CV</a
+      >
+
+      <!-- Hamburger Icon -->
+      <button class="md:hidden" onclick="toggleMenu()">
+        <svg
+          class="w-8 h-8 text-gray-800"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by Default) -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md p-4">
+      <ul class="space-y-4 text-gray-700 text-center">
+        <li><a href="port.html" class="block hover:text-blue-500 nav-link">Home</a></li>
+        <li><a href="about.html" class="block hover:text-blue-500 nav-link">About</a></li>
+        <li><a href="services.html" class="block hover:text-blue-500 nav-link">Services</a></li>
+        <li><a href="pricing.html" class="block hover:text-blue-500 nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="block hover:text-blue-500 nav-link">Contact</a></li>
+        <li><a href="pages.html" class="block hover:text-blue-500 nav-link">Pages</a></li>
+      </ul>
+    </div>
+
+    <div class="w-full md:w-1/3 mb-8 md:mb-0">
+        <div class="w-full md:w-[1900px] h-[300px] md:h-[800px]">
+            <iframe
+              src="https://my.spline.design/cutecomputerfollowcursor-f7c21f1b837e42f9df6bd691dab25a2a/"
+              class="w-full h-full border-none rounded-lg pointer-events-none"
+            >
+            </iframe>
+          </div>
+    </div>
+    <script>
+        // Get the current page URL
+        const currentPage = window.location.pathname.split("/").pop(); 
+      
+        // Get all navigation links
+        const navLinks = document.querySelectorAll(".nav-link");
+      
+        navLinks.forEach(link => {
+          // Check if the href of the link matches the current page
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("text-blue-600"); // Add active styles
+          }
+        });
+      </script>
+
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 lg:px-12 text-center">
+      <h3 class="text-blue-500 font-medium mb-2">Skills & Expertise</h3>
+      <h2 class="text-4xl font-bold text-gray-900 mb-6">My Specialties</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+        I have expertise in multiple programming languages and frameworks. Here's an overview of my technical proficiency:
+      </p>
+  
+      <!-- Skills Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Language Skills -->
+        <div class="bg-white p-6 rounded-lg shadow-md text-center ">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Languages</h3>
+          <div class="flex justify-center space-x-6">
+            <!-- PHP -->
+            <div class="relative w-24 h-24 mb-8">
+              <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"></circle>
+                <circle class="text-green-500 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"
+                  stroke-dasharray="251.2" stroke-dashoffset="60"></circle>
+              </svg>
+              <p class="absolute inset-0 flex items-center justify-center text-lg font-bold">80%</p>
+              <p class="mt-2 text-gray-700 ">PHP</p>
+            </div>
+  
+
+            <div class="relative w-24 h-24 mb-8">
+                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                  <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"></circle>
+                  <circle class="text-red-500 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"
+                    stroke-dasharray="251.2" stroke-dashoffset="40"></circle>
+                </svg>
+                <p class="absolute inset-0 flex items-center justify-center text-lg font-bold">90%</p>
+                <p class="mt-2 text-gray-700 ">Python</p>
+              </div>
+
+            <!-- JavaScript -->
+            <div class="relative w-24 h-24">
+              <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"></circle>
+                <circle class="text-yellow-500 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"
+                  stroke-dasharray="251.2" stroke-dashoffset="80"></circle>
+              </svg>
+              <p class="absolute inset-0 flex items-center justify-center text-lg font-bold">75%</p>
+              <p class="mt-2 text-gray-700">JavaScript</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Frameworks -->
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Frameworks & Libraries</h3>
+          <div class="flex justify-center space-x-6">
+            <!-- Tailwind CSS -->
+            <div class="relative w-24 h-24">
+              <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"></circle>
+                <circle class="text-blue-300 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"
+                  stroke-dasharray="251.2" stroke-dashoffset="40"></circle>
+              </svg>
+              <p class="absolute inset-0 flex items-center justify-center text-lg font-bold">85%</p>
+              <p class="mt-2 text-gray-700">Tailwind CSS</p>
+            </div>
+  
+            <!-- React -->
+            <div class="relative w-24 h-24">
+              <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"></circle>
+                <circle class="text-blue-500 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"
+                  stroke-dasharray="251.2" stroke-dashoffset="20"></circle>
+              </svg>
+              <p class="absolute inset-0 flex items-center justify-center text-lg font-bold">95%</p>
+              <p class="mt-2 text-gray-700">React</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Backend Frameworks -->
+        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Backend Technologies</h3>
+          <div class="flex justify-center space-x-6">
+            <!-- Laravel -->
+            <div class="relative w-24 h-24">
+              <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"></circle>
+                <circle class="text-brown-200 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"
+                  stroke-dasharray="251.2" stroke-dashoffset="60"></circle>
+              </svg>
+              <p class="absolute inset-0 flex items-center justify-center text-lg font-bold">75%</p>
+              <p class="mt-2 text-gray-700">Laravel</p>
+            </div>
+  
+            <!-- Django -->
+            <div class="relative w-24 h-24">
+              <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                <circle class="text-gray-300 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"></circle>
+                <circle class="text-violet-500 stroke-current" cx="50" cy="50" r="40" stroke-width="8" fill="none"
+                  stroke-dasharray="251.2" stroke-dashoffset="70"></circle>
+              </svg>
+              <p class="absolute inset-0 flex items-center justify-center text-lg font-bold">70%</p>
+              <p class="mt-2 text-gray-700">Django</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 lg:px-12 text-center">
+      <h3 class="text-blue-500 font-medium mb-2">Tech Stack</h3>
+      <h2 class="text-4xl font-bold text-gray-900 mb-6">Languages & Frameworks</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+        I work with a variety of modern technologies to build high-performance applications.
+      </p>
+  
+      <!-- Scrolling Logos -->
+      <div class="relative overflow-hidden">
+        <div class="flex space-x-8 animate-scroll">
+          <!-- Duplicate logos to create seamless effect -->
+          <div class="flex space-x-8">
+            <!-- PHP -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP"></div>
+            <!-- JavaScript -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"></div>
+            <!-- HTML -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML"></div>
+            <!-- CSS -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS"></div>
+            <!-- Python -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"></div>
+            <!-- Tailwind -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind"></div>
+            <!-- Bootstrap -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap"></div>
+            <!-- React -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React"></div>
+            <!-- Next.js -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js"></div>
+            <!-- Laravel -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Laravel"></div>
+            <!-- Django -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg" alt="Django"></div>
+  
+            <!-- DUPLICATE SET TO REMOVE THE GAP -->
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP"></div>
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"></div>
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML"></div>
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS"></div>
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"></div>
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind"></div>
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap"></div>
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React"></div>
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js"></div>
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Laravel"></div>
+            <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg" alt="Django"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Tailwind Animation -->
+    <style>
+      @keyframes scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+      .animate-scroll {
+        display: flex;
+        white-space: nowrap;
+        animation: scroll 15s linear infinite;
+      }
+      .logo-card {
+        background: #f8fafc;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 120px;
+      }
+      .logo-card img {
+        max-width: 70%;
+        max-height: 70%;
+      }
+    </style>
+  </section>
+  
+  
+</body>
+</html>
