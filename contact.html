@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ehsan Portfolio</title>
-   
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script
       type="module"
       src="https://unpkg.com/@splinetool/viewer@1.9.77/build/spline-viewer.js"
     ></script>
-    <link rel="icon" type="image/png" sizes="" href="logo.png">
+    <link rel="icon" type="image/png" sizes="" href="logo.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -23,17 +23,39 @@
   </head>
   <body class="bg-white">
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full flex justify-between items-center p-6 bg-white shadow-md ">
-      <div class="text-2xl font-bold"><a href="index.html" class="hover:text-blue-500 nav-link">Portfolio</a></div>
+    <nav
+      class="fixed top-0 left-0 w-full flex justify-between items-center p-6 bg-white shadow-md"
+    >
+      <div class="text-2xl font-bold">
+        <a href="index.html" class="hover:text-blue-500 nav-link">Portfolio</a>
+      </div>
 
       <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-6 text-gray-700">
-        <li><a href="index.html" class="hover:text-blue-500 nav-link">Home</a></li>
-        <li><a href="about.html" class="hover:text-blue-500 nav-link">About</a></li>
-        <li><a href="services.html" class="hover:text-blue-500 nav-link">Services</a></li>
-        <li><a href="project.html" class="hover:text-blue-500 nav-link">Project</a></li>
-        <li><a href="contact.html" class="hover:text-blue-500 nav-link">Contact</a></li>
-        <li><a href="blog.html" class="hover:text-blue-500 nav-link">Blog</a></li>
+        <li>
+          <a href="index.html" class="hover:text-blue-500 nav-link">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="hover:text-blue-500 nav-link">About</a>
+        </li>
+        <li>
+          <a href="services.html" class="hover:text-blue-500 nav-link"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="project.html" class="hover:text-blue-500 nav-link"
+            >Project</a
+          >
+        </li>
+        <li>
+          <a href="contact.html" class="hover:text-blue-500 nav-link"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a href="blog.html" class="hover:text-blue-500 nav-link">Blog</a>
+        </li>
       </ul>
 
       <!-- Download Button -->
@@ -63,126 +85,219 @@
     </nav>
 
     <!-- Mobile Menu (Hidden by Default) -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white shadow-md p-8">
-      <ul class="space-y-4 text-gray-700 text-center p-4">
-        <li><a href="index.html" class="block hover:text-blue-500 nav-link mt-12">Home</a></li>
-        <li><a href="about.html" class="block hover:text-blue-500 nav-link">About</a></li>
-        <li><a href="services.html" class="block hover:text-blue-500 nav-link">Services</a></li>
-        <li><a href="project.html" class="block hover:text-blue-500 nav-link">Project</a></li>
-        <li><a href="contact.html" class="block hover:text-blue-500 nav-link">Contact</a></li>
-        <li><a href="blog.html" class="block hover:text-blue-500 nav-link">Blog</a></li>
+    <div
+      id="mobileMenu"
+      class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-white z-40 overflow-y-auto pt-20 pb-6 px-6"
+    >
+      <button
+        onclick="toggleMenu()"
+        class="absolute top-6 right-6 text-gray-800"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <ul class="space-y-6 text-gray-700 text-center">
+        <li>
+          <a
+            href="index.html"
+            class="block text-xl py-2 hover:text-blue-500 nav-link"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="about.html"
+            class="block text-xl py-2 hover:text-blue-500 nav-link"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="services.html"
+            class="block text-xl py-2 hover:text-blue-500 nav-link"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="project.html"
+            class="block text-xl py-2 hover:text-blue-500 nav-link"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            href="contact.html"
+            class="block text-xl py-2 hover:text-blue-500 nav-link"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a
+            href="blog.html"
+            class="block text-xl py-2 hover:text-blue-500 nav-link"
+            >Blog</a
+          >
+        </li>
+        <li class="pt-4">
+          <a
+            href="#"
+            class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md w-full"
+            >Download CV</a
+          >
+        </li>
       </ul>
     </div>
 
-
     <script>
-        // Get the current page URL
-        const currentPage = window.location.pathname.split("/").pop(); 
-      
-        // Get all navigation links
-        const navLinks = document.querySelectorAll(".nav-link");
-      
-        navLinks.forEach(link => {
-          // Check if the href of the link matches the current page
-          if (link.getAttribute("href") === currentPage) {
-            link.classList.add("text-blue-600"); // Add active styles
-          }
-        });
-      </script>
+      // Get the current page URL
+      const currentPage = window.location.pathname.split("/").pop();
+
+      // Get all navigation links
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach((link) => {
+        // Check if the href of the link matches the current page
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("text-blue-600"); // Add active styles
+        }
+      });
+    </script>
 
     <div class="w-full md:w-1/3 mb-8 md:mb-0">
-        <div class="w-full md:w-[1900px] h-[300px] md:h-[600px]">
-            <iframe
-              src="https://my.spline.design/robotinteractiveevents-e9f18bb7007b102dc1d9470f105e1b2f/"
-              class="w-full h-full border-none rounded-lg"
-            >
-            </iframe>
-          </div>
+      <div class="w-full md:w-[1900px] h-[300px] md:h-[600px]">
+        <iframe
+          src="https://my.spline.design/robotinteractiveevents-e9f18bb7007b102dc1d9470f105e1b2f/"
+          class="w-full h-full border-none rounded-lg"
+        >
+        </iframe>
+      </div>
     </div>
 
-
     <section class="py-16 bg-gray-50 mb-0">
-        <div class="container mx-auto px-6 lg:px-12 text-center ">
-          <h3 class="text-blue-500 font-medium mb-2">Get in Touch</h3>
-          <h2 class="text-4xl font-bold text-gray-900 mb-6">Contact Me</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto mb-12">
-            Feel free to reach out for collaborations, job opportunities, or just to say hello!
-          </p>
-      
-          <!-- Contact Grid -->
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Phone -->
-            <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
-              <span class="text-blue-500 text-3xl">📞</span>
-              <div class="text-left">
-                <h3 class="text-xl font-semibold text-gray-900">Phone</h3>
-                <p class="text-gray-600">
-                  <a href="tel:+8801531540639" class="text-blue-500 hover:underline">
-                    +880 1531 540 639
-                  </a>
-                </p>
-              </div>
-            </div>
-      
-            <!-- Email -->
-            <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
-              <span class="text-blue-500 text-3xl">📧</span>
-              <div class="text-left">
-                <h3 class="text-xl font-semibold text-gray-900">Email</h3>
-                <p class="text-gray-600">
-                  <a href="mailto:saadkhan420000@gmail.com" class="text-blue-500 hover:underline">
-                    saadkhan420000@gmail.com
-                  </a>
-                </p>
-              </div>
-            </div>
-      
-            <!-- Location -->
-            <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
-              <span class="text-blue-500 text-3xl">📍</span>
-              <div class="text-left">
-                <h3 class="text-xl font-semibold text-gray-900">Location</h3>
-                <p class="text-gray-600">
-                  27/7/1 East Madartek, Adorshopara, Dhaka
-                </p>
-              </div>
-            </div>
-      
-            <!-- LinkedIn -->
-            <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
-              <span class="text-blue-500 text-3xl">🔗</span>
-              <div class="text-left">
-                <h3 class="text-xl font-semibold text-gray-900">LinkedIn</h3>
-                <p class="text-gray-600">
-                  <a href="https://www.linkedin.com/in/ehsan-abdullah-khan-saad-965b48150/" 
-                     target="_blank" 
-                     class="text-blue-500 hover:underline">
-                    linkedin.com/in/ehsan-abdullah-khan-saad
-                  </a>
-                </p>
-              </div>
+      <div class="container mx-auto px-6 lg:px-12 text-center">
+        <h3 class="text-blue-500 font-medium mb-2">Get in Touch</h3>
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">Contact Me</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+          Feel free to reach out for collaborations, job opportunities, or just
+          to say hello!
+        </p>
+
+        <!-- Contact Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Phone -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4"
+          >
+            <span class="text-blue-500 text-3xl">📞</span>
+            <div class="text-left">
+              <h3 class="text-xl font-semibold text-gray-900">Phone</h3>
+              <p class="text-gray-600">
+                <a
+                  href="tel:+8801531540639"
+                  class="text-blue-500 hover:underline"
+                >
+                  +880 1531 540 639
+                </a>
+              </p>
             </div>
           </div>
-      
-          <!-- Contact Form -->
-          <div class="mt-12 w-full mx-auto bg-white p-8 rounded-lg shadow-md mb-0">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Send a Message</h3>
-            <form action="#" method="POST">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input type="text" placeholder="Your Name" class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <input type="email" placeholder="Your Email" class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-              </div>
-              <textarea placeholder="Your Message" rows="5" class="mt-4 p-3 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-              <button type="submit" class="mt-4 bg-blue-600 text-white px-6 py-3 rounded-md shadow-md hover:bg-blue-700 transition">
-                Send Message
-              </button>
-            </form>
+
+          <!-- Email -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4"
+          >
+            <span class="text-blue-500 text-3xl">📧</span>
+            <div class="text-left">
+              <h3 class="text-xl font-semibold text-gray-900">Email</h3>
+              <p class="text-gray-600">
+                <a
+                  href="mailto:saadkhan420000@gmail.com"
+                  class="text-blue-500 hover:underline"
+                >
+                  saadkhan420000@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4"
+          >
+            <span class="text-blue-500 text-3xl">📍</span>
+            <div class="text-left">
+              <h3 class="text-xl font-semibold text-gray-900">Location</h3>
+              <p class="text-gray-600">
+                27/7/1 East Madartek, Adorshopara, Dhaka
+              </p>
+            </div>
+          </div>
+
+          <!-- LinkedIn -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4"
+          >
+            <span class="text-blue-500 text-3xl">🔗</span>
+            <div class="text-left">
+              <h3 class="text-xl font-semibold text-gray-900">LinkedIn</h3>
+              <p class="text-gray-600">
+                <a
+                  href="https://www.linkedin.com/in/ehsan-abdullah-khan-saad-965b48150/"
+                  target="_blank"
+                  class="text-blue-500 hover:underline"
+                >
+                  linkedin.com/in/ehsan-abdullah-khan-saad
+                </a>
+              </p>
+            </div>
           </div>
         </div>
-        
-      </section>
-      
-  
-  
-</body>
+
+        <!-- Contact Form -->
+        <div
+          class="mt-12 w-full mx-auto bg-white p-8 rounded-lg shadow-md mb-0"
+        >
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Send a Message</h3>
+          <form action="#" method="POST">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <textarea
+              placeholder="Your Message"
+              rows="5"
+              class="mt-4 p-3 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+            <button
+              type="submit"
+              class="mt-4 bg-blue-600 text-white px-6 py-3 rounded-md shadow-md hover:bg-blue-700 transition"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
