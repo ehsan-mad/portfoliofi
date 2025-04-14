@@ -175,13 +175,40 @@
       </div>
 
       <!-- Spline 3D Viewer (Resizes on Mobile) -->
-      <div class="w-full md:w-full h-[300px] md:h-[600px]">
+      <div class="w-full md:w-full h-[300px] md:h-[600px] relative">
+        <!-- Adding a transparent overlay that can be toggled -->
+        <div id="iframe-overlay" class="absolute inset-0 z-10 bg-transparent pointer-events-auto"></div>
         <iframe
           src="https://my.spline.design/keyboard-75fb06060cf4a37585891b4dbcae05f4/"
           class="w-full h-full border-none rounded-lg"
+          loading="lazy"
+          title="3D Keyboard Model"
         >
         </iframe>
       </div>
+
+      <script>
+        // Script to toggle the overlay when interacting with the iframe
+        const overlay = document.getElementById('iframe-overlay');
+        const iframeContainer = overlay.parentElement;
+        
+        // Remove overlay when clicked to allow interaction with the iframe
+        overlay.addEventListener('click', function() {
+          this.style.display = 'none';
+        });
+        
+        // Add overlay back when mouse leaves the iframe area to allow scrolling
+        iframeContainer.addEventListener('mouseleave', function() {
+          overlay.style.display = 'block';
+        });
+        
+        // For mobile: add overlay back after a short delay when touching outside
+        document.addEventListener('touchstart', function(e) {
+          if (!iframeContainer.contains(e.target)) {
+            overlay.style.display = 'block';
+          }
+        });
+      </script>
     </section>
     <div class="bg-blue-100 rounded-lg">
       <div class="container mx-auto px-4 py-12">
