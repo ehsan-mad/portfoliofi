@@ -172,15 +172,16 @@
         }
       });
     </script>
-    <div class="w-full mb-8 md:mb-0">
-      <div
-        class="relative w-full md:w-[1900px] h-[300px] md:h-[1200px] rounded-lg"
+    <div class="w-full md:w-full h-[300px] md:h-[600px] relative">
+      <!-- Adding a transparent overlay that can be toggled -->
+      <div id="iframe-overlay" class="absolute inset-0 z-10 bg-transparent pointer-events-auto"></div>
+      <iframe
+        src="https://my.spline.design/techinspired3dassetsairobo-ff93b7198eeaaff3ad8242dfa78b8328/"
+        class="w-full h-full border-none mt-10"
+        loading="lazy"
+        title="3D Keyboard Model"
       >
-        <iframe
-          url="https://prod.spline.design/DPJRzFTtlfOLWkm7/scene.splinecode"
-          class="absolute inset-0 pointer-events-none"
-        ></iframe>
-      </div>
+      </iframe>
     </div>
 
     <section
